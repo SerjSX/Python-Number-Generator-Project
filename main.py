@@ -105,7 +105,7 @@ def generate():
 
     # If end is less than start, then toggle opposite
     if end < start:
-        print("Opposite true")
+        #print("Opposite true")
         opposite = True
 
     # If opposite false then just normall randomize from start to end
@@ -114,36 +114,33 @@ def generate():
         # We do the following to show correct negative checkboxes
         if str(start).startswith("-"):
             negmin_var.set("on")
-            print("Opposite start on")
+            #print("Opposite start on")
         else:
             negmin_var.set("off")
-            print("Opposite start off")
+            #print("Opposite start off")
         
         if str(end).startswith("-"):
             negmax_var.set("on")
-            print("Opposite end on")
+            #print("Opposite end on")
         else:
             negmax_var.set("off")
-            print("Opposite end off")
+            #print("Opposite end off")
 
         # If start and end are both negative, then trigger both of them to on
         if str(start).startswith("-") and str(end).startswith("-"):
             negmin_var.set("on")
             negmax_var.set("on")
-            print("Opposite both on")
+            #print("Opposite both on")
 
         # If both values are 0, -0, or the same, then throw an error message. Or else proceed
         # with randomizing.
         if minimum_input.get() == '0' and maximum_input.get() == '0':
-            print(start,end)
             messagebox.showerror("Error", "You cannot put both values 0.")
             return
         elif minimum_input.get() == '-0' and maximum_input.get() == '-0':
-            print(start,end)
             messagebox.showerror("Error", "You cannot put both values -0.")
             return
         elif minimum_input.get() == maximum_input.get() and maximum_input.get() == minimum_input.get():
-            print(start,end)
             messagebox.showerror("Error", "You cannot generate a number with the same number.")
             return
         else:
@@ -165,35 +162,32 @@ def generate():
         # We do the opposite here because we are switching the places
         if str(start).startswith("-"):
             negmax_var.set("on")
-            print("Opposite start on")
+            #print("Opposite start on")
         else:
             negmax_var.set("off")
-            print("Opposite start off")
+            #print("Opposite start off")
         
         if str(end).startswith("-"):
             negmin_var.set("on")
-            print("Opposite end on")
+            #print("Opposite end on")
         else:
             negmin_var.set("off")
-            print("Opposite end off")
+            #print("Opposite end off")
 
         if str(start).startswith("-") and str(end).startswith("-"):
             negmin_var.set("on")
             negmax_var.set("on")
-            print("Opposite both on")
+            #print("Opposite both on")
 
         # If both values are 0, -0, or the same, then throw an error message. Or else proceed
         # with randomizing.
         if minimum_input.get() == '0' and maximum_input.get() == '0':
-            print(start,end)
             messagebox.showerror("Error", "You cannot put both values 0.")
             return
         elif minimum_input.get() == '-0' and maximum_input.get() == '-0':
-            print(start,end)
             messagebox.showerror("Error", "You cannot put both values -0.")
             return
         elif minimum_input.get() == maximum_input.get() and maximum_input.get() == minimum_input.get():
-            print(start,end)
             messagebox.showerror("Error", "You cannot generate a number with the same number.")
             return
         else:
