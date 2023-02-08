@@ -1,5 +1,7 @@
 # Random-Number-Generator
 
+<img src="https://i.imgur.com/5GHkCsM.png">
+
 **Tier:** 1-Beginner
 
 Generate a random number between a range of defined minimun and maximun.
